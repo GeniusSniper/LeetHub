@@ -18,7 +18,7 @@ var rightSideView = function(root, result = []) {
         if(step >= max) result.push(node.val);
         step++;
         let right = side(node.right, step, Math.max(step, max));
-        return Math.max(right, side(node.left, step, Math.max(step, max, right)));
+        return side(node.left, step, Math.max(step, max, right));
     }
     side(root);
     
