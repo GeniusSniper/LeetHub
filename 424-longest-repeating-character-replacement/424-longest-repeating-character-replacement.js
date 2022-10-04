@@ -17,7 +17,7 @@ var characterReplacement = function(s, k) {
             c--;
             break;
         }
-        if(kc > 0) c = Math.min(s.length, c + kc);
+        c = Math.min(s.length, c + kc);
         count = Math.max(count, c);
     }
     return count;
