@@ -5,16 +5,16 @@
 <p>&nbsp;</p>
 <p><strong>Example 1:</strong></p>
 
-<pre style="position: relative;"><strong>Input:</strong> s1 = "ab", s2 = "eidbaooo"
+<pre><strong>Input:</strong> s1 = "ab", s2 = "eidbaooo"
 <strong>Output:</strong> true
 <strong>Explanation:</strong> s2 contains one permutation of s1 ("ba").
-<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+</pre>
 
 <p><strong>Example 2:</strong></p>
 
-<pre style="position: relative;"><strong>Input:</strong> s1 = "ab", s2 = "eidboaoo"
+<pre><strong>Input:</strong> s1 = "ab", s2 = "eidboaoo"
 <strong>Output:</strong> false
-<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+</pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
