@@ -19,7 +19,6 @@ var firstMissingPositive = function(nums) {
         let cur = (nums[i] - 1) % nums.length;
         nums[cur] += nums.length;
     }
-    console.log(nums)
     for(let i = 1; i < nums.length; i++) {
         if(nums[i] <= nums.length) return i + 1;
     }
