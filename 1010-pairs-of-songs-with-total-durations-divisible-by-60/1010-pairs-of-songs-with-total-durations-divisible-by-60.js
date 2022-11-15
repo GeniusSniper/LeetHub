@@ -9,6 +9,5 @@ var numPairsDivisibleBy60 = function(time) {
         if(cache[60 - tem] || tem === 0 && cache[tem]) count += cache[60 - tem] || cache[tem];
         cache[tem] = cache[tem] ? cache[tem] + 1 : 1;
     }
-    console.log(cache)
     return count;
 };
