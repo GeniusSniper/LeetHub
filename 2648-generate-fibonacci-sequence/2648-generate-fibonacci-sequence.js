@@ -2,16 +2,15 @@
  * @return {Generator<number>}
  */
 var fibGenerator = function*() {
-    yield 0;
-    yield 1;
-    this.first = 0;
-    this.second = 1;
-    while(true){
-        this.result = this.first + this.second;
-        this.first = this.second;
-        this.second = this.result;
-        yield this.result;
-    }    
+    let prev1 = 0;
+    let prev2 = 1;
+
+    while(true) {
+        yield prev1;
+        const temp = prev1;
+        prev1 = prev2;
+        prev2 += temp;
+    }
 };
 
 /**
