@@ -2,7 +2,7 @@
  * @param {number[]} nums
  */
 var ArrayWrapper = function(nums) {
-    this.nums = this.nums ? [...this.nums, ...nums] : nums;
+    this.nums = nums;
 };
 
 ArrayWrapper.prototype.valueOf = function() {
