@@ -6,8 +6,7 @@ var ArrayWrapper = function(nums) {
 };
 
 ArrayWrapper.prototype.valueOf = function() {
-    if(!this.nums || !this.nums.length) return 0;
-    return this.nums.reduce((a,b) => a + b);
+    return this.nums.reduce((a,b) => a + b, 0);
 }
 
 ArrayWrapper.prototype.toString = function() {
