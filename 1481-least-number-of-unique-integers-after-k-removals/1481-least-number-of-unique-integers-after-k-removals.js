@@ -13,10 +13,10 @@ var findLeastNumOfUniqueInts = function(arr, k) {
     for(let i = 0;i < arr.length; i++){
         myset[arr[i]] ? myset[arr[i]]++ : myset[arr[i]] = 1;
     }
-    let sortedKeys = Object.keys(myset).sort( (a,b) => myset[a] - myset[b] );
-    for(let i = 0; i < sortedKeys.length; i++){
-        let tempval = myset[sortedKeys[i]];
-        if(k < tempval) return sortedKeys.length - i;
+    let sortedValues = Object.values(myset).sort((a,b) => a - b);
+    for(let i = 0; i < sortedValues.length; i++){
+        let tempval = sortedValues[i];
+        if(k < tempval) return sortedValues.length - i;
         k -= tempval;
     }
     return 0;
