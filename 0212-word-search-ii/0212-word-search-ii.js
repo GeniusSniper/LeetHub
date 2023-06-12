@@ -21,6 +21,7 @@ var findWords = function(board, words) {
         checkword(i - 1, j, cache, word);
         checkword(i, j - 1, cache, word);
         cache[i + '#' + j] = false;
+        return;
     }
     
     return [...myset];
