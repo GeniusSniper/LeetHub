@@ -4,7 +4,7 @@
  * @return {string[]}
  */
 var findWords = function(board, words) {
-    let dict = dictory(words), myset = new Set();
+    let dict = dictory(words), result = [];
     for(let i = 0; i < board.length; i++) {
         for(let j = 0; j < board[i].length; j++) {
             checkword(i, j);
@@ -15,7 +15,10 @@ var findWords = function(board, words) {
         let word = temp[board[i][j]];
         if(!word || cache[i + '#' + j]) return ;
         cache[i + '#' + j] = true;
-        if(word['isword']) myset.add(word['isword']);
+        if(word['isword']){
+            result.push(word['isword']);
+            delete word['isword'];
+        }
         checkword(i + 1, j, cache, word);
         checkword(i, j + 1, cache, word);
         checkword(i - 1, j, cache, word);
@@ -24,7 +27,7 @@ var findWords = function(board, words) {
         return ;
     }
     
-    return [...myset];
+    return result;
 };
 
 
