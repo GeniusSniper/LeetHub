@@ -11,9 +11,9 @@ var findWords = function(board, words) {
         }
     }
     function checkword(i, j, cache = {}, temp = dict){
-        if(i < 0 || j < 0 || i >= board.length || j >= board[i].length) return;
+        if(i < 0 || j < 0 || i >= board.length || j >= board[i].length) return undefined;
         let word = temp[board[i][j]];
-        if(!word || cache[i + '#' + j]) return ;
+        if(!word || cache[i + '#' + j]) return undefined;
         cache[i + '#' + j] = true;
         if(word['isword']) myset.add(word['isword']);
         checkword(i + 1, j, cache, word);
@@ -21,7 +21,7 @@ var findWords = function(board, words) {
         checkword(i - 1, j, cache, word);
         checkword(i, j - 1, cache, word);
         cache[i + '#' + j] = false;
-        return;
+        return undefined;
     }
     
     return [...myset];
