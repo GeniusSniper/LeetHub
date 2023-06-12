@@ -20,7 +20,7 @@ var findWords = function(board, words) {
         checkword(i, j + 1, cache, word);
         checkword(i - 1, j, cache, word);
         checkword(i, j - 1, cache, word);
-        delete cache[i + '#' + j];
+        cache[i + '#' + j] = false;
     }
     
     return [...myset];
